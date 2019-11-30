@@ -1,0 +1,6 @@
+name: Pendu
+version: 0.1
+main: fr.babyister.pendu.Pendu
+commands:
+  pendu:
+    description: pendu game
