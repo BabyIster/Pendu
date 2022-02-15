@@ -1,0 +1,163 @@
+
+This site has been acquired by Toptal
+(Attention! API endpoint has changed)
+Save New Duplicate & Edit Just Text1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+<h1>Saisir les informations :</h1>
+
+<form NAME="form1">
+    <p>
+      Nom :<br>
+      <INPUT TYPE="text" name="input" value="" placeholder="nom"><BR>
+</form>
+
+<form NAME="form2">
+    <p>
+      Prénom :<br>
+      <INPUT TYPE="text" name="input" value="" placeholder="prénom"><BR>
+        
+</form>
+
+<form NAME="form3">
+    <p>
+      Mail :<br>
+      <INPUT type="email" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="input" value=""><BR>
+</form>
+
+<form NAME="form4">
+    <p>
+      Téléphone :<br>
+      <input type="tel" pattern="[0-9]{3}" placeholder="téléphone" aria-label="3-digit prefix" size="10" name="input" value="" /> 
+    </form>
+
+  <br>  
+  <button  onclick="CreateMember()"
+        type="button">
+      Ajouter un memebre
+</button>
+
+<button  onclick="DeleteMembers()"
+      type="button">
+    Retirer le dernier membre
+</button>
+
+  
+  <br>  <br>
+
+<table border="1" cellpadding="15" id="members">
+    <tr>
+       <th>Prénom</th>
+       <th>Nom</th>
+       <th>Mail</th>
+       <th>Télépphone</th>
+       <th>Options</th>
+    </tr>
+ </table>
+
+ <script>
+
+    function CreateMember() {
+      var table = document.getElementById("members");
+      var row = table.insertRow(1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+
+      var nom = document.form1.input.value;
+      var prenom = document.form2.input.value;
+      var mail = document.form3.input.value;
+      var telephone = document.form4.input.value;
+
+      cell1.innerHTML = nom;
+      cell2.innerHTML = prenom;
+      cell3.innerHTML = mail;
+      cell4.innerHTML = telephone;
+      cell5.innerHTML = "❌";
+
+    }
+    
+    function DeleteMembers() {
+      document.getElementById("members").deleteRow(1);
+    }
+
+</script>
